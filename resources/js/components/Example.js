@@ -16,7 +16,7 @@ export default class Example extends Component {
             form: {
                 description: '',
                 amount: '',
-                wallet_id: 3
+                wallet_id: 1
             }
         }
         this.handleChange = this.handleChange.bind(this);
@@ -39,7 +39,7 @@ export default class Example extends Component {
             let data = await res.json()
             this.setState({
                 transfers: this.state.transfers.concat(data),
-                money: this.state.money
+                money: this.state.money + (parseInt(data.amount))
             })
         } catch(error) {
             this.setState({
