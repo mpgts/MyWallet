@@ -67032,7 +67032,7 @@ function (_Component) {
                 data = _context.sent;
                 this.setState({
                   transfers: this.state.transfers.concat(data),
-                  money: parseInt(this.state.money) + parseInt(data.amount)
+                  money: this.state.money
                 });
                 _context.next = 15;
                 break;

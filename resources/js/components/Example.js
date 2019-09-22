@@ -39,7 +39,7 @@ export default class Example extends Component {
             let data = await res.json()
             this.setState({
                 transfers: this.state.transfers.concat(data),
-                money: (parseInt(this.state.money)) + (parseInt(data.amount))
+                money: this.state.money
             })
         } catch(error) {
             this.setState({
