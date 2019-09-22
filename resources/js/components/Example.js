@@ -37,13 +37,11 @@ export default class Example extends Component {
 
             let res = await fetch(`${url}/api/transfer`, config);
             let data = await res.json()
-
             this.setState({
                 transfers: this.state.transfers.concat(data),
-                money: this.state.money + (parseInt(data.amount))
+                money: this.state.money + ((data.amount))
             })
         } catch(error) {
-            console.log(error);
             this.setState({
                 error
             })
